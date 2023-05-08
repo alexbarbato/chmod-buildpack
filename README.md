@@ -54,3 +54,16 @@ pack build -p apache-activemq-dist.zip my-dist \
   -b anthonydahanne/chmod:0.0.1 \ 
   --builder paketobuildpacks/builder:base
 ```
+
+
+## Use the buildpack with the `kp` CLI
+```bash
+# Build buildpack fresh if desired
+pack buildpack package chmod-buildpack --config ./package.toml --format file
+
+# Update the ClusterStore
+kp clusterstore save default -b ./chmod-buildpack.cnb
+
+# Update the ClusterBuilder (currently set to the specific version of a buildpack)
+kp clusterbuilder patch full-jammy --order ./full-order-100.0.428.yaml
+```
