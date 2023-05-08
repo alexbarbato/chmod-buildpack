@@ -1,9 +1,9 @@
 # Buildpack API version
-api = "0.7"
+api = "0.8"
 
 # Buildpack ID and metadata
 [buildpack]
-id = "anthonydahanne/chmod"
+id = "vmware-test/chmod"
 version = "0.0.1"
 name = "Chmod Buildpack"
 
