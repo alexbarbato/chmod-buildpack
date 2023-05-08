@@ -4,7 +4,7 @@ api = "0.8"
 # Buildpack ID and metadata
 [buildpack]
 id = "vmware-test/chmod"
-version = "0.0.1"
+version = "0.1.1"
 name = "Chmod Buildpack"
 
 # Stacks that the buildpack will work with: any

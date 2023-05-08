@@ -65,5 +65,6 @@ pack buildpack package chmod-buildpack --config ./package.toml --format file
 kp clusterstore save default -b ./chmod-buildpack.cnb
 
 # Update the ClusterBuilder (currently set to the specific version of a buildpack)
+# NOTE: This is a one off change because we aren't pinning a version
 kp clusterbuilder patch full-jammy --order ./full-order-100.0.428.yaml
 ```
